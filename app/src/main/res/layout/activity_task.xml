@@ -1,18 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".task">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/title"
+
+<RelativeLayout
+    android:id="@+id/heading"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:background="#003166"/>
+    android:paddingTop="6dp"
+    android:background="#003166">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    app:layout_constraintTop_toBottomOf="@+id/title"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_back_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_toRightOf="@+id/back"
+        android:paddingLeft="10dp"/>
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_toLeftOf="@id/save"
+        android:background="@drawable/ic_delete"
+        android:layout_marginRight="5dp"
+        />
+    <Button
+        android:id="@+id/save"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_tick"
+        android:layout_alignParentRight="true"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        android:hint="Enter Title......."
+        android:textColorHint="#b3b3b3"
+        android:textSize="25dp"
+        />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:background="#006ee6">
+
+        <TextView
+            android:id="@+id/calendar"
+            android:layout_marginTop="9dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_date"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Date           \n   26/11/2022"
+            android:textSize="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@null"
+            android:layout_toRightOf="@id/calendar"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/calendar"
+            android:background="@drawable/ic_clock"
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/time"
+            android:background="@null"
+            android:text="Time \n12:00"
+            android:textSize="20dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginLeft="27dp"/>
+
+        <TextView
+            android:id="@+id/repeat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/time"
+            android:background="@drawable/ic_repeat"
+            android:layout_marginTop="35dp"/>
+
+<!--        <Switch-->
+<!--            android:id="@+id/onoff"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/time"-->
+<!--            -->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:layout_marginTop="30dp"/>-->
+
+        <TextView
+            android:id="@+id/repeat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_toRightOf="@+id/repeat"
+            android:text="  Repeat"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="39dp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
